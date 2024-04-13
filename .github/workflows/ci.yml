@@ -45,17 +45,22 @@ jobs:
 
       - name: Install dependencies
         run:
-          poetry install
+          cd backend && poetry install
 
       - name: Run black
         run: |
-          poetry run black ./backend --check
+          cd backend && poetry run black . --check
 
       - name: Run isort
         run: |
-          poetry run isort ./backend --check --diff
+          cd backend && poetry run isort . --check --diff
 
       - name: Run Mypy
         run: |
-          poetry run mypy ./backend
+          cd backend && poetry run mypy .
+
+      - name: Test
+        run: |
+          cd backend
+          poetry run coverage run manage.py test
 
