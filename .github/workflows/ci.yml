@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       DJANGO_SECRET_KEY: secret
+      ALLOWED_HOSTS: 127.0.0.1
       DB_ENGINE: "django.db.backends.mysql"
       DB_HOST: 127.0.0.1
       DB_PORT: 3306
