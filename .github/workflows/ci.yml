@@ -17,7 +17,7 @@ jobs:
       DB_PORT: 3306
       DB_USER: root
       DB_PASSWORD: password
-      DB_DATABASE: db
+      DB_NAME: db
     steps:
       - name: Checkout the codes
         uses: actions/checkout@v3
