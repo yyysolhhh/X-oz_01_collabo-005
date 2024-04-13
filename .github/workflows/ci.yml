@@ -65,6 +65,12 @@ jobs:
         run: |
           cd backend && poetry run mypy .
 
+      - name: Run migrations
+        run: |
+          cd backend
+          poetry run python manage.py makemigrations
+          poetry run python manage.py migrate
+
       - name: Test
         run: |
           cd backend && poetry run python manage.py test
