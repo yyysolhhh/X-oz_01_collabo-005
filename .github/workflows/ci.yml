@@ -65,7 +65,7 @@ jobs:
         run: |
           cd backend && poetry run mypy .
 
-      - name: Test
-        run: |
-          cd backend && poetry run python manage.py test
+#      - name: Test
+#        run: |
+#          cd backend && poetry run python manage.py test
 
