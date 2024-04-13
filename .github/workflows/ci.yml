@@ -53,12 +53,6 @@ jobs:
         run: |
           cd backend && poetry install
 
-      - name: Run migrations
-        run: |
-          cd backend
-          poetry run python manage.py makemigrations
-          poetry run python manage.py migrate
-
       - name: Run black
         run: |
           cd backend && poetry run black . --check
