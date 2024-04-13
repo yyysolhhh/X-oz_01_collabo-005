@@ -18,6 +18,11 @@ jobs:
       DB_USER: root
       DB_PASSWORD: password
       DB_NAME: db
+      AWS_ACCESS_KEY_ID: "a"
+      AWS_SECRET_ACCESS_KEY: "a"
+      AWS_STORAGE_BUCKET_NAME: "a"
+      AWS_REGION_NAME: "a"
+      AWS_DEFAULT_ACL: "a"
     steps:
       - name: Checkout the codes
         uses: actions/checkout@v3
